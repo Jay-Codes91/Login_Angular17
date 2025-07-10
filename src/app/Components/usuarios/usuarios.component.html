@@ -1,0 +1,39 @@
+@for (item of claims; track $index) {
+<h3 class="text-center">Bienvenido: {{item.nombre}} {{item.apellido}}</h3>
+<h3 class="text-center">{{item.rol}}</h3><br>
+}
+
+<h1 class="text-center">Listado de personas</h1><br>
+
+@if (rolUser == 'Administrador') {
+  <div class="container-fluid table-responsive text-center">
+    <table class="table table-bordered">
+       <thead>
+        <tr>
+            <th class="bg-secondary-subtle" scope="col">Nombre</th>
+            <th class="bg-secondary-subtle" scope="col">Apellido</th>
+            <th class="bg-secondary-subtle" scope="col">Correo</th>
+            <th class="bg-secondary-subtle" scope="col">Rol</th>
+        </tr>
+       </thead>
+       <tbody>
+        @for (item of users; track $index) {
+          <tr>
+            <td>{{item.nombre}}</td>
+            <td>{{item.apellido}}</td>
+            <td>{{item.correo}}</td>
+            <td>{{item.rol}}</td>
+          </tr>
+        }
+       </tbody>
+    </table>
+</div><br>
+}@else if(rolUser == 'Usuario') {
+  <h3 class="text-center">No tienes permiso para ver esta información</h3>
+  <h3 class="text-center">Usuarios con acceso: <b>Administradores</b></h3><br>
+}
+
+
+<div class="w-25 mx-auto text-center">
+  <button class="btn btn-primary" type="button" (click)="logOut()">Salir</button>
+</div>
