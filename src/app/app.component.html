@@ -1,16 +1,18 @@
-<header class="container-fluid">
-  <div class="row">
-     <div class="col-12 bg-primary">
-        <h2>Proyecto Login</h2>
-     </div>
-     <div class="col-12 bg-info border-top border-dark">
-        <h2>Net Core 9 y Angular 17</h2>
-     </div>
-  </div>
-</header>
+<div class="cont d-flex justify-content-between flex-column">
+   <header class="container-fluid">
+      <div class="row">
+         <div class="col-12 bg-primary">
+            <h2>Proyecto Login</h2>
+         </div>
+         <div class="col-12 bg-info border-top border-dark">
+            <h2>Net Core 9 y Angular 17</h2>
+         </div>
+      </div>
+   </header>
 
-<router-outlet></router-outlet>
+   <router-outlet></router-outlet>
 
-<footer class="container-fluid bg-dark p-4 mt-5">
-  <h4 class="text-center text-white">Empresa XYZ, &copy; {{anio | date: 'yyyy'}}</h4>
-</footer>
+   <footer class="container-fluid bg-dark p-4 mt-5">
+      <h4 class="text-center text-white">Empresa XYZ, &copy; {{anio | date: 'yyyy'}}</h4>
+   </footer>
+</div>
